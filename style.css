@@ -1,0 +1,338 @@
+body {
+	background-image: url('https://github.com/carlosavilae/RobotAnimation/blob/master/images/background-image.jpg?raw=true');
+	background-size: cover;
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+}
+
+p {
+	padding: 0;
+	margin-bottom: 0px;
+}
+
+.robots {
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+}
+
+.parent-antenna,
+.child-antenna,
+.head,
+.left-arm,
+.left-finger-one,
+.left-finger-two,
+.left-finger-three,
+.torso,
+.right-arm,
+.right-finger-one,
+.right-finger-two,
+.right-finger-three,
+.left-leg-sub,
+.left-foot,
+.right-leg-sub,
+.right-foot{
+	background-color: #FFCE5C;
+	border: 2.5px solid black;
+}
+
+/* ,main-head */
+.main-head {
+	margin-bottom: 10px;
+	transition: all 0.5s;
+}
+
+.main-antenna {
+	position: relative;
+	left: 120px;	
+}
+
+.main-antenna:hover {
+	transform: rotate(5deg);
+}
+
+.parent-antenna {
+	width: 5px;
+	height: 40px;
+	transform: rotate(40deg);
+}
+
+.child-antenna {		
+	width: 5px;
+	height: 30px;
+	margin-top: -20px;	
+}
+
+.head {
+	width: 90px;
+	height: 110px;
+	/* border-radius: 20%; */
+	-webkit-clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
+	clip-path: polygon(0 0, 100% 0, 94% 100%, 6% 100%);
+	margin: 0 auto;
+}
+
+.left-eye {
+	width: 30px;
+	height: 30px;
+	background-color:#A4A4A4;
+	border: 2px solid #666666; 
+	border-radius: 50%;
+	position: relative;
+	top: 25px;
+	left: 5px;
+}
+
+.left-sub-eye {
+	width: 22px;
+	height: 22px;
+	background-color: black;
+	border-radius: 50%;
+	position: relative;
+	top: 10px;
+	left: 6px;
+}
+
+.eyes:hover {
+	transform: rotate(-20deg);
+}
+
+.left-eye:hover, .right-eye:hover {
+	transform: rotate(30deg);
+}
+
+.right-eye{
+	width: 25px;
+	height: 25px;
+	background-color:#A4A4A4;
+	border: 2px solid #666666; 
+	border-radius: 50%;
+	position: relative;
+	top: -5px;
+	left: 45px;
+}
+
+.right-sub-eye {
+	width: 18px;
+	height: 18px;
+	background-color: black;
+	border-radius: 50%;
+	position: relative;
+	top: 8px;
+	left: 6px;
+}
+/* End of .main-head */
+
+/* .upper-body */
+.upper-body {
+	display: flex;
+	margin-bottom: 0px;	
+}
+
+/* left arm */
+.left-arm, .right-arm {
+	width: 40px;
+	height: 115px;
+	border-radius: 10%;	
+	background-color: #666666;	
+}
+
+.left-arm {
+	margin-left: 10px;
+	transform: rotate(20deg);
+}
+
+.left-hand {
+	display: flex;		
+}
+
+.left-hand:hover {
+	transform: rotate(20deg);
+}
+
+.left-finger-one,
+.left-finger-two,
+.left-finger-three,
+.right-finger-one,
+.right-finger-two,
+.right-finger-three {
+	width: 8px;
+	height: 30px;
+	background-color: #FFCE5C;
+	margin: 0 5px;
+	position: relative;	
+}
+
+.left-finger-one {
+	top: -5px;
+	left: -30px;
+	transform: rotate(40deg);
+}
+
+.left-finger-two {
+	top: 10px;
+	left: -30px;
+	transform: rotate(20deg);
+}
+
+.left-finger-three {
+	top: 10px;
+	left: -25px;
+	transform: rotate(-20deg);
+}
+/* end of .left-arm */
+
+/* .right arm */
+.right-arm {
+	margin-left: 10px;
+	transform: rotate(-20deg);
+}
+
+.right-hand {
+	display: flex;
+}
+
+.right-hand:hover {
+	transform: rotate(-20deg);
+}
+
+.right-finger-one {
+	top: 10px;
+	left: 25px;
+	transform: rotate(2deg);
+}
+
+.right-finger-two {
+	top: 5px;
+	left: 30px;
+	transform: rotate(-30deg);
+}
+
+.right-finger-three {
+	top: -10px;
+	left: 30px;
+	transform: rotate(-50deg);
+}
+/* end of .right-arm */
+
+/* .torso */
+.torso {
+	width: 115px; 
+	height: 160px;
+	/* border-radius: 20px; */
+	-webkit-clip-path: polygon(10% 1%, 90% 1%, 100% 100%, 0 100%);
+	clip-path: polygon(10% 1%, 90% 1%, 100% 100%, 0 100%);
+	z-index: 4;
+	transition: all 0.5s;
+	border: 5px solid black;
+}
+
+.torso:hover, .main-head:hover {
+	transform: translate(-10px, -5px);
+}
+
+.chest {
+	width: 60px;
+	height: 60px;
+	background-color:black;
+	border: 2px solid #666666; 
+	border-radius: 50%;
+	position: relative;
+	top: 25px;
+	left: 25px;
+	transition: all  0.5s;
+}
+
+.chest:hover {
+	transform: translate(0px, 40px);
+}
+
+.sub-chest {
+	width: 50px;
+	height: 50px;
+	background-color: #666666;
+	border-radius: 50%;
+	position: relative;
+	top: 5px;
+	left: 6px;
+}
+	/* End of .torso */
+/* End of .upper-body */
+
+/* .lower-body */
+.lower-body {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.left-leg-main {
+	margin: 0;	
+}
+
+.left-leg-main:hover, .main-left-arm:hover {
+	-webkit-transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+	transform: rotate(10deg);	
+}
+
+.right-leg-main:hover, .main-right-arm:hover {
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+.left-leg-sub, .right-leg-sub{
+	width: 42px;
+	height: 90px;
+	border-radius: 10%;
+	margin: 0 13px;	
+	background-color: #666666;
+}
+
+.left-foot, .right-foot{
+	width: 70px;
+	height: 30px;
+	background-color:  #FFCE5C;
+	
+}
+
+.left-foot {
+	position: relative;
+	top: -20px;
+	right: 12px;
+	border-radius: 70px 70px 0 0;	
+}
+
+.right-foot {
+	position: relative;
+	top: -20px;
+	left: 12px;
+	border-radius: 70px 70px 0 0;
+}
+/* End of lower-body */
+
+.android {
+	animation: leftToRight 5s linear infinite;
+	position: absolute; 
+  margin: 0 auto;;
+  bottom: 0;
+}
+
+@keyframes leftToRight {
+	0%, 100% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 90px;
+  }
+}
